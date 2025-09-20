@@ -8,32 +8,32 @@ const Programs = () => {
       title: "Elite Training Programs",
       description: "Custom-designed to enhance speed, agility, and endurance. Our elite programs are tailored for serious athletes looking to reach the next level.",
       features: ["Personalized Training Plans", "Performance Analytics", "Expert Coaching", "Competition Preparation"],
-      color: "from-primary-500 to-primary-600",
-      bgColor: "bg-primary-50 dark:bg-primary-900/20"
+      gradient: "bg-gradient-athletic-green",
+      iconGradient: "bg-gradient-teal-pop"
     },
     {
       icon: Users,
       title: "Youth Development Camps",
       description: "Nurturing the next generation with skills, discipline, and mentorship. Building character and athleticism in young athletes.",
       features: ["Age-Appropriate Training", "Character Building", "Mentorship Programs", "Fun Learning Environment"],
-      color: "from-accent-500 to-accent-600",
-      bgColor: "bg-accent-50 dark:bg-accent-900/20"
+      gradient: "bg-gradient-youth-blue",
+      iconGradient: "bg-gradient-sports-energy"
     },
     {
       icon: Target,
       title: "Team Solutions",
       description: "Helping clubs and academies scale performance with structure and data. Comprehensive team development programs.",
       features: ["Team Analytics", "Strategic Planning", "Coaching Development", "Performance Metrics"],
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20"
+      gradient: "bg-gradient-tech-purple",
+      iconGradient: "bg-gradient-purple-glow"
     },
     {
       icon: Zap,
       title: "Sports Technology Integration",
       description: "We align with cutting-edge tools like STATSports to give athletes measurable progress and data-driven insights.",
       features: ["Performance Tracking", "Data Analytics", "Technology Integration", "Real-time Feedback"],
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50 dark:bg-purple-900/20"
+      gradient: "bg-gradient-midnight-teal",
+      iconGradient: "bg-gradient-neon-cyan"
     }
   ]
 
@@ -60,7 +60,7 @@ const Programs = () => {
   }
 
   return (
-    <section id="programs" className="section-padding bg-secondary-50 dark:bg-secondary-800 relative overflow-hidden">
+    <section id="programs" className="section-padding bg-gradient-section relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />
@@ -76,10 +76,10 @@ const Programs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold font-display gradient-text mb-6">
-            Programs & Services
+          <h2 className="text-4xl lg:text-5xl font-bold font-display text-white mb-6">
+            <span className="gradient-texts">Programs & Services</span>
           </h2>
-          <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive training solutions designed to elevate your athletic performance 
             and unlock your full potential across all levels and sports.
           </p>
@@ -101,30 +101,30 @@ const Programs = () => {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <div className={`${program.bgColor} rounded-3xl p-8 h-full transition-all duration-300 hover:shadow-2xl border border-white/20 dark:border-white/10`}>
+              <div className="bg-gradient-card rounded-3xl p-8 h-full transition-all duration-300 hover:shadow-2xl border border-white/20">
                 {/* Icon */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-16 h-16 bg-gradient-to-r ${program.color} rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg`}
+                  className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg"
                 >
                   <program.icon className="w-8 h-8 text-white" />
                 </motion.div>
 
                 {/* Content */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                     {program.title}
                   </h3>
                   
-                  <p className="text-secondary-600 dark:text-secondary-300 leading-relaxed">
+                  <p className="text-gray-200 leading-relaxed">
                     {program.description}
                   </p>
 
                   {/* Features */}
                   <ul className="space-y-2">
                     {program.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2 text-sm text-secondary-600 dark:text-secondary-300">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${program.color} rounded-full`} />
+                      <li key={featureIndex} className="flex items-center space-x-2 text-sm text-white/80">
+                        <div className="w-2 h-2 bg-white/60 rounded-full" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -134,7 +134,7 @@ const Programs = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-full mt-6 py-3 px-4 bg-gradient-to-r ${program.color} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
+                    className="w-full mt-6 py-3 px-4 bg-gradient-primary text-white font-semibold rounded-xl hover:bg-gradient-accent transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />

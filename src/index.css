@@ -18,6 +18,53 @@
   }
 }
 
+/* Modern Blue-Black Theme Gradients */
+@layer utilities {
+  /* Base Background Gradients */
+  .bg-gradient-base {
+    background: linear-gradient(135deg, #0d1117, #1b2735);
+  }
+  
+  .bg-gradient-section {
+    background: linear-gradient(135deg, #0f2027, #2c5364);
+  }
+  
+  .bg-gradient-card {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+  
+  /* Button Gradients */
+  .bg-gradient-primary {
+    background: linear-gradient(90deg, #00c9ff, #00b894);
+  }
+  
+  .bg-gradient-secondary {
+    background: linear-gradient(90deg, #1f1f1f, #2c3e50);
+  }
+  
+  /* Accent Gradients */
+  .bg-gradient-accent {
+    background: linear-gradient(90deg, #00f5d4, #00bbf9);
+  }
+  
+  .bg-gradient-neon {
+    background: linear-gradient(90deg, #00f5d4, #00bbf9, #00c9ff);
+  }
+  
+  /* Special Purpose Gradients */
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #0d1117, #1b2735, #0f2027);
+  }
+  
+  .bg-gradient-feature {
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #2c5364);
+  }
+  
+  .bg-gradient-cta {
+    background: linear-gradient(135deg, #00c9ff, #00b894, #00f5d4);
+  }
+}
+
 @layer components {
   .container {
     @apply mx-auto px-4 sm:px-6 lg:px-8;
@@ -28,7 +75,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+    @apply bg-gradient-accent bg-clip-text text-transparent;
   }
   
   .glass-effect {
@@ -40,11 +87,19 @@
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25;
+    @apply bg-gradient-primary hover:bg-gradient-accent text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25;
   }
   
   .btn-secondary {
-    @apply bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300;
+    @apply bg-gradient-secondary hover:bg-gradient-card text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-accent hover:bg-gradient-neon text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25;
+  }
+  
+  .btn-cta {
+    @apply bg-gradient-cta hover:bg-gradient-neon text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25;
   }
 }
 

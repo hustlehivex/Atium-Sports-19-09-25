@@ -20,7 +20,7 @@ const Hero = () => {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <div className="w-full h-[120%] bg-gradient-to-br from-primary-900 via-primary-800 to-accent-800">
+        <div className="w-full h-[120%] bg-gradient-hero">
           {/* Animated Background Elements */}
           <div className="absolute inset-0">
             {/* Floating geometric shapes */}
@@ -90,7 +90,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl lg:text-7xl font-bold font-display leading-tight"
           >
             <span className="block">Unleash Your</span>
-            <span className="block gradient-text bg-gradient-to-r from-white to-primary-200">
+            <span className="block ">
               Athletic Potential
             </span>
           </motion.h1>
@@ -141,7 +141,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="absolute bottom-20 left-0 right-0"
         >
-          <div className="flex justify-center space-x-8 sm:space-x-16">
+          {/* <div className="flex justify-center space-x-8 sm:space-x-16">
             {[
               { number: '500+', label: 'Athletes Trained' },
               { number: '50+', label: 'Programs Offered' },
@@ -162,7 +162,7 @@ const Hero = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </motion.div>
 

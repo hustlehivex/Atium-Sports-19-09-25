@@ -94,7 +94,7 @@ const Gallery = () => {
   }
 
   return (
-    <section id="gallery" className="section-padding bg-secondary-50 dark:bg-secondary-800 relative overflow-hidden">
+    <section id="gallery" className="section-padding bg-gradient-section relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />
@@ -110,10 +110,10 @@ const Gallery = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold font-display gradient-text mb-6">
-            Gallery & Media
+          <h2 className="text-4xl lg:text-5xl font-bold font-display text-white mb-6">
+            <span className="gradient-texts">Gallery & Media</span>
           </h2>
-          <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Explore our collection of training moments, athlete achievements, and community events 
             that showcase the spirit of Atium Sports.
           </p>
@@ -136,8 +136,8 @@ const Gallery = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-secondary-700 text-secondary-600 dark:text-secondary-300 hover:bg-primary-50 dark:hover:bg-primary-900/20'
+                  ? 'bg-gradient-accent text-white shadow-lg'
+                  : 'bg-gradient-secondary text-gray-300 hover:bg-gradient-card'
               }`}
             >
               {category}
@@ -203,10 +203,10 @@ const Gallery = () => {
                   </div>
 
                   <div className="p-4">
-                    <h3 className="font-semibold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                    <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
                       {item.alt}
                     </h3>
-                    <p className="text-sm text-secondary-600 dark:text-secondary-300 mt-1">
+                    <p className="text-sm text-gray-300 mt-1">
                       {item.type === 'video' ? 'Video' : 'Image'} • {item.category}
                     </p>
                   </div>

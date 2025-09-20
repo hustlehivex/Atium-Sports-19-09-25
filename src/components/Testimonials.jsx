@@ -74,7 +74,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section id="testimonials" className="section-padding bg-white dark:bg-secondary-900 relative overflow-hidden">
+    <section id="testimonials" className="section-padding bg-gradient-base relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />
@@ -90,10 +90,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold font-display gradient-text mb-6">
-            What Our Athletes Say
+          <h2 className="text-4xl lg:text-5xl font-bold font-display text-white mb-6">
+            <span className="gradient-texts">What Our Athletes Say</span>
           </h2>
-          <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Hear from the athletes who have transformed their performance and achieved 
             their goals with Atium Sports training programs.
           </p>
@@ -236,7 +236,7 @@ const Testimonials = () => {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="text-3xl lg:text-4xl font-bold gradient-text mb-2">
+              <div className="text-3xl lg:text-4xl font-bold gradient-texts mb-2">
                 {stat.number}
               </div>
               <div className="text-secondary-600 dark:text-secondary-300 font-medium">

@@ -41,7 +41,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-secondary-900 dark:bg-black text-white relative overflow-hidden">
+    <footer className="bg-gradient-base text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />
@@ -61,7 +61,7 @@ const Footer = () => {
               className="lg:col-span-1"
             >
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-accent rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-xl">A</span>
                 </div>
                 <span className="text-2xl font-bold font-display">
@@ -202,7 +202,7 @@ const Footer = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transition-all duration-300"
+                className="bg-gradient-primary hover:bg-gradient-accent text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transition-all duration-300"
               >
                 Subscribe
               </motion.button>
@@ -251,7 +251,7 @@ const Footer = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-accent hover:bg-gradient-primary rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         aria-label="Scroll to top"
       >
         <ArrowUp className="w-6 h-6" />
