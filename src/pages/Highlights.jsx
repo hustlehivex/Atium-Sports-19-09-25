@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Target, Users, Trophy, Star, Zap, Home } from 'lucide-react'
+import whoarewe from '../assets/bg-images/Who are we.png';
+import NetflixCarousel from '../components/NetflixCarousel';
+import acheivements from '../assets/bg-images/Acheivements.png';
+
 
 const Highlights = ({ navigateToPage }) => {
   const fadeInUp = {
@@ -166,15 +170,19 @@ const Highlights = ({ navigateToPage }) => {
                 variants={fadeInUp}
                 className="relative"
               >
-                <div className="aspect-square bg-gradient-feature rounded-3xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-24 h-24 bg-gradient-accent rounded-full flex items-center justify-center mx-auto">
-                      <span className="text-4xl font-bold text-white">A</span>
-                    </div>
-                    <h3 className="text-2xl font-bold">Atium Sports</h3>
-                    <p className="text-white/80">Sports Technology Platform</p>
-                  </div>
-                </div>
+                <div className="aspect-square bg-gradient-feature rounded-3xl shadow-2xl flex items-center justify-center relative overflow-hidden">
+  {/* Image fills the background */}
+  <img
+    src={whoarewe}
+    alt="Background"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  {/* Foreground content */}
+  
+</div>
+
+
                 
                 {/* Floating Elements */}
                 <motion.div
@@ -213,13 +221,12 @@ const Highlights = ({ navigateToPage }) => {
                 className="relative order-2 lg:order-1"
               >
                 <div className="aspect-square bg-gradient-card rounded-3xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-                      <Target className="w-12 h-12 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Performance Tracking</h3>
-                    <p className="text-white/80">Real-time Analytics</p>
-                  </div>
+                 {/* Image fills the background */}
+                  <img
+                    src={whoarewe}
+                    alt="Background"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                  />
                 </div>
               </motion.div>
 
@@ -370,6 +377,9 @@ const Highlights = ({ navigateToPage }) => {
           </div>
         </div>
       </motion.section>
+
+      {/*Image Section*/}
+      <NetflixCarousel />
     </div>
   )
 }

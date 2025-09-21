@@ -10,8 +10,8 @@ const HomeObjectives = () => {
         <div className="objective">
           <h3 className="home-text30">Growth</h3>
           <p className="home-text31">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Atium Sports drives growth by empowering athletes, expanding opportunities, and building inclusive pathways. We focus on unlocking potential, inspiring excellence,
+          and creating lasting impact through innovation and community engagement.
             <span
               dangerouslySetInnerHTML={{
                 __html: ' ',
@@ -22,8 +22,8 @@ const HomeObjectives = () => {
         <div className="objective home-objective2">
           <h3 className="home-text32">Develop</h3>
           <p className="home-text33">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          We develop athletes holistically by strengthening physical performance, resilience, and teamwork. Through structured programs,
+          expert guidance, and advanced tools, Atium Sports prepares individuals for success in both sports and life.
             <span
               dangerouslySetInnerHTML={{
                 __html: ' ',
@@ -34,8 +34,8 @@ const HomeObjectives = () => {
         <div className="objective home-objective3">
           <h3 className="home-text34">Optimize</h3>
           <p className="home-text35">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Atium Sports optimises performance with science, technology, and data-driven methods.
+          We enhance efficiency, reduce risks, and build sustainable systems to help athletes achieve peak performance and consistent excellence.
             <span
               dangerouslySetInnerHTML={{
                 __html: ' ',
