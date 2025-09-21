@@ -1,0 +1,63 @@
+/* Section Background */
+.home-objectives {
+    background: linear-gradient(180deg, #0b1220 0%, #08121c 100%);
+    padding: 5rem 2rem;
+    color: #e5e5e5;
+    text-align: center;
+  }
+  
+  /* Subtitle (Objectives) */
+  .home-text29 {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00e0ff; /* Cyan accent */
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Objectives Grid */
+  .home-objectives-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Objective Cards */
+  .objective {
+    background: linear-gradient(145deg, rgba(18, 28, 45, 0.95), rgba(10, 20, 35, 0.95));
+    border: 1px solid rgba(0, 255, 255, 0.05);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .objective:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 224, 255, 0.6);
+    box-shadow: 0 12px 30px rgba(0, 224, 255, 0.15),
+                0 0 20px rgba(0, 224, 255, 0.25);
+  }
+  
+  /* Titles */
+  .home-text30,
+  .home-text32,
+  .home-text34 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  /* Paragraphs */
+  .home-text31,
+  .home-text33,
+  .home-text35 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cfd8e3;
+  }
+  
