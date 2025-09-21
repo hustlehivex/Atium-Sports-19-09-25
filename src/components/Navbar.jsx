@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+
+const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -15,18 +16,27 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Programs', href: '#programs' },
-    { name: 'Events', href: '#events' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#home', page: 'home' },
+    { name: 'About', href: '#about', page: 'home' },
+    { name: 'Programs', href: '#programs', page: 'home' },
+    { name: 'Events', href: '#events', page: 'home' },
+    { name: 'Gallery', href: '#gallery', page: 'home' },
+    { name: 'Features', href: '#highlights', page: 'highlights' },
+    { name: 'Contact', href: '#contact', page: 'home' },
   ]
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const handleNavigation = (item) => {
+    if (item.page === 'highlights') {
+      navigateToPage('highlights')
+    } else {
+      navigateToPage('home')
+      // Scroll to section after a brief delay to ensure page is loaded
+      setTimeout(() => {
+        const element = document.querySelector(item.href)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
     }
     setIsMobileMenuOpen(false)
   }
@@ -64,7 +74,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 key={item.name}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className="text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
               >
                 {item.name}
@@ -118,7 +128,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 key={item.name}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className="block w-full text-left px-4 py-2 text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-secondary-100 dark:hover:bg-secondary-800 rounded-lg transition-colors duration-200"
               >
                 {item.name}
