@@ -55,7 +55,7 @@ const Events = () => {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <div className="w-full h-[120%] bg-gradient-to-br from-primary-900 via-primary-800 to-accent-800">
+        <div className="w-full h-[120%] bg-gradient-section">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 opacity-10">
             <motion.div
@@ -115,7 +115,7 @@ const Events = () => {
           className="text-center mb-16 text-white"
         >
           <h2 className="text-4xl lg:text-5xl font-bold font-display mb-6">
-            <span className="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+            <span className="gradient-texts">
               Events & Highlights
             </span>
           </h2>
@@ -195,7 +195,7 @@ const Events = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="btn-secondary flex items-center space-x-2 mt-6"
+                    className="bg-gradient-primary hover:bg-gradient-accent text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center space-x-2 mt-6"
                   >
                     <span>Register Now</span>
                     <ArrowRight className="w-4 h-4" />

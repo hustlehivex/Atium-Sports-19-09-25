@@ -29,7 +29,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-white dark:bg-secondary-900 relative overflow-hidden">
+    <section id="about" className="section-padding bg-gradient-base relative overflow-hidden">
       {/* Background Elements */}
       <motion.div
         style={{ y }}
@@ -56,8 +56,8 @@ const About = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold font-display gradient-text">
-                About Atium Sports
+              <h2 className="text-4xl lg:text-5xl font-bold font-display text-white">
+                <span className="gradient-texts">About Atium Sports</span>
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full" />
             </motion.div>
@@ -67,7 +67,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed"
+              className="text-lg text-gray-300 leading-relaxed"
             >
               Atium Sports exists to empower athletes. Our mission is simple: to transform 
               potential into performance. We blend cutting-edge training methods, innovative 
@@ -79,7 +79,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-lg text-secondary-600 dark:text-secondary-300 leading-relaxed"
+              className="text-lg text-gray-300 leading-relaxed"
             >
               Whether you're just starting out or already competing at a professional level, 
               we're here to guide, challenge, and inspire you. Our comprehensive approach 
@@ -102,13 +102,13 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="p-4 bg-white dark:bg-secondary-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="p-4 bg-gradient-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <feature.icon className="w-8 h-8 text-primary-600 mb-3" />
-                  <h3 className="font-semibold text-secondary-900 dark:text-white mb-2">
+                  <feature.icon className="w-8 h-8 text-cyan-400 mb-3" />
+                  <h3 className="font-semibold text-white mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-secondary-600 dark:text-secondary-300">
+                  <p className="text-sm text-gray-300">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -178,7 +178,7 @@ const About = () => {
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   className="w-32 h-32 border-4 border-white/30 rounded-full flex items-center justify-center"
                 >
-                  <div className="w-24 h-24 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full flex items-center justify-center">
+                  <div className="w-24 h-24 bg-gradient-accent rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-2xl">A</span>
                   </div>
                 </motion.div>

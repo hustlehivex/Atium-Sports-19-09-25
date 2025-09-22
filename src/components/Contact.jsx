@@ -68,7 +68,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-secondary-50 dark:bg-secondary-800 relative overflow-hidden">
+    <section id="contact" className="section-padding bg-gradient-base relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />
@@ -84,10 +84,10 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold font-display gradient-text mb-6">
-            Contact & Join Us
+          <h2 className="text-4xl lg:text-5xl font-bold font-display text-white mb-6">
+            <span className="gradient-texts">Contact & Join Us</span>
           </h2>
-          <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to take your athletic journey to the next level? Get in touch with us 
             and become part of the Atium Sports community.
           </p>
@@ -101,15 +101,15 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-secondary-700 rounded-3xl p-8 shadow-xl"
+            className="bg-gradient-card rounded-3xl p-8 shadow-xl"
           >
-            <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
+            <h3 className="text-2xl font-bold text-white mb-6">
               Send us a Message
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-secondary-700 dark:text-secondary-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-300 mb-2">
                   Full Name
                 </label>
                 <input
@@ -119,13 +119,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-secondary-300 dark:border-secondary-600 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                   placeholder="Enter your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-secondary-700 dark:text-secondary-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
                   Email Address
                 </label>
                 <input
@@ -135,13 +135,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-secondary-300 dark:border-secondary-600 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                   placeholder="Enter your email address"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-secondary-700 dark:text-secondary-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -151,7 +151,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-secondary-300 dark:border-secondary-600 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell us about your athletic goals and how we can help..."
                 />
               </div>
@@ -187,8 +187,8 @@ const Contact = () => {
             className="space-y-8"
           >
             {/* Contact Information */}
-            <div className="bg-white dark:bg-secondary-700 rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
+            <div className="bg-gradient-card rounded-3xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Get in Touch
               </h3>
               
@@ -202,16 +202,16 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center space-x-4 p-4 rounded-xl hover:bg-secondary-50 dark:hover:bg-secondary-600 transition-all duration-300"
+                    className="flex items-center space-x-4 p-4 rounded-xl hover:bg-white/10 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-secondary-900 dark:text-white">
+                      <h4 className="font-semibold text-white">
                         {info.title}
                       </h4>
-                      <p className="text-secondary-600 dark:text-secondary-300">
+                      <p className="text-gray-300">
                         {info.value}
                       </p>
                     </div>
@@ -221,8 +221,8 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-white dark:bg-secondary-700 rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
+            <div className="bg-gradient-card rounded-3xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Follow Us
               </h3>
               
@@ -239,7 +239,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
+                    className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6" />
@@ -249,7 +249,7 @@ const Contact = () => {
             </div>
 
             {/* Linktree Links */}
-            <div className="bg-gradient-to-br from-primary-600 to-accent-600 rounded-3xl p-8 text-white">
+            <div className="bg-gradient-fire-energy rounded-3xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">
                 Quick Links
               </h3>
@@ -285,7 +285,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-12 text-white">
+          <div className="bg-gradient-sporty-mix rounded-3xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Become Part of Atium Sports
             </h3>
@@ -296,7 +296,7 @@ const Contact = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 font-semibold py-4 px-8 rounded-2xl hover:shadow-lg transition-all duration-300"
+              className="bg-white text-gray-900 font-semibold py-4 px-8 rounded-2xl hover:shadow-lg transition-all duration-300"
             >
               Start Your Journey Today
             </motion.button>
