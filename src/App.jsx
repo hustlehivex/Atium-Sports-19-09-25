@@ -11,6 +11,8 @@ import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CompanyHighlights from './components/Pages/CompanyHighlights'
+import PartnersSection from './components/PartnersSection'
+import PricingPlans from './components/PricingPlans'
 import Highlights from './pages/Highlights'
 
 function App() {
@@ -64,7 +66,9 @@ function App() {
                 <Programs />
                 <Events />
                 <Gallery />
+                <PartnersSection />
                 <Testimonials />
+                <PricingPlans />
                 <Contact />
                 <CompanyHighlights />
               </motion.div>
