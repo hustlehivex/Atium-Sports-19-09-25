@@ -278,50 +278,10 @@ const Highlights = ({ navigateToPage }) => {
         </div>
       </motion.section>
 
-      {/* Achievements Grid */}
-      <motion.section
-        initial="initial"
-        animate="animate"
-        variants={staggerContainer}
-        className="py-20 lg:py-32"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              variants={fadeInUp}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl sm:text-5xl font-bold font-display mb-6">
-                <span className="gradient-texts">Key Achievements</span>
-              </h2>
-              <p className="text-lg text-white/80 max-w-3xl mx-auto">
-                Our journey of innovation and impact in the sports technology space
-              </p>
-            </motion.div>
+      {/*Image Section*/}
+      <NetflixCarousel />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeInUp}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  className="bg-gradient-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
-                >
-                  <div className="text-gradient-accent mb-4">
-                    {achievement.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{achievement.title}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    {achievement.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Vision & Goals Section */}
+ {/* Vision & Goals Section */}
       <motion.section
         initial="initial"
         animate="animate"
@@ -378,8 +338,52 @@ const Highlights = ({ navigateToPage }) => {
         </div>
       </motion.section>
 
-      {/*Image Section*/}
-      <NetflixCarousel />
+      {/* Achievements Grid */}
+      <motion.section
+        initial="initial"
+        animate="animate"
+        variants={staggerContainer}
+        className="py-20 lg:py-32"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              variants={fadeInUp}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold font-display mb-6">
+                <span className="gradient-texts">Key Achievements</span>
+              </h2>
+              <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                Our journey of innovation and impact in the sports technology space
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  className="bg-gradient-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  <div className="text-gradient-accent mb-4">
+                    {achievement.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{achievement.title}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    {achievement.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+     
+
+
     </div>
   )
 }
