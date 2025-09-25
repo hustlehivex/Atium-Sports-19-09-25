@@ -1,11 +1,38 @@
+
+/*Import Block - start : */
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
+import atiumLogo from '../assets/logos/atium-logo.svg'
+/*Import Block - end : */
 
-
+/*Component Block - start : */
 const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
+
+  // Handle active section detection
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.6,
+      rootMargin: '-100px 0px -100px 0px'
+    })
+
+    const sections = document.querySelectorAll('section[id]')
+    sections.forEach(section => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +41,10 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+
+  /* Navigation Items Configuration */
+
 
   const navItems = [
     { name: 'Home', href: '#home', page: 'home' },
@@ -30,7 +61,6 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
       navigateToPage('highlights')
     } else {
       navigateToPage('home')
-      // Scroll to section after a brief delay to ensure page is loaded
       setTimeout(() => {
         const element = document.querySelector(item.href)
         if (element) {
@@ -39,6 +69,15 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
       }, 100)
     }
     setIsMobileMenuOpen(false)
+  }
+
+  const getNavItemClass = (href) => {
+    const isActive = activeSection === href.substring(1)
+    const baseClasses = "font-medium transition-colors duration-200 text-lg"
+    const activeClasses = "text-primary-600 dark:text-primary-400 font-semibold"
+    const inactiveClasses = "text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400"
+    
+    return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
   }
 
   return (
@@ -59,11 +98,13 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
-            </div>
-            <span className="text-xl font-bold font-display gradient-texts">
-              Atium Sports
+            <img 
+              src={atiumLogo}
+              alt="Atium Sports Logo"
+              className="w-12 h-12 object-contain"
+            />
+            <span className="text-2xl font-bold font-display gradient-texts">
+              ATIUM Sports
             </span>
           </motion.div>
 
@@ -75,7 +116,7 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleNavigation(item)}
-                className="text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
+                className={getNavItemClass(item.href)}
               >
                 {item.name}
               </motion.button>
@@ -129,7 +170,7 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => handleNavigation(item)}
-                className="block w-full text-left px-4 py-2 text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-secondary-100 dark:hover:bg-secondary-800 rounded-lg transition-colors duration-200"
+                className={`${getNavItemClass(item.href)} block w-full text-left px-4 py-2`}
               >
                 {item.name}
               </motion.button>
@@ -142,5 +183,3 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
 }
 
 export default Navbar
-
-

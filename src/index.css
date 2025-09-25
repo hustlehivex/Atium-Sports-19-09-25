@@ -20,7 +20,7 @@
 
 /* Modern Blue-Black Theme Gradients */
 @layer utilities {
-  /* Base Background Gradients */
+  Base Background Gradients
   .bg-gradient-base {
     background: linear-gradient(135deg, #0d1117, #1b2735);
   }
@@ -35,20 +35,28 @@
   
   /* Button Gradients */
   .bg-gradient-primary {
-    background: linear-gradient(90deg, #00c9ff, #00b894);
+    background: linear-gradient(90deg, #8721FF, #4D13BD); /* Vibrant violet → Royal Purple */
   }
   
   .bg-gradient-secondary {
     background: linear-gradient(90deg, #1f1f1f, #2c3e50);
   }
+
+  .bg-gradient-gold-hover {
+    background: linear-gradient(90deg, #ffc200, #ffc200);
+  }
+  
+.bg-gradient-gold {
+  background: linear-gradient(90deg, #ffd11a, #ffc200, #e6ae00); /* Using your gold palette */
+}
   
   /* Accent Gradients */
   .bg-gradient-accent {
-    background: linear-gradient(90deg, #00f5d4, #00bbf9);
+    background: linear-gradient(90deg, #8721FF, #943FFF); /* Purple accents */
   }
   
   .bg-gradient-neon {
-    background: linear-gradient(90deg, #00f5d4, #00bbf9, #00c9ff);
+    background: linear-gradient(90deg, #8721FF, #943FFF, #A15EFF); /* Violet spectrum */
   }
   
   /* Special Purpose Gradients */
@@ -61,8 +69,8 @@
   }
   
   .bg-gradient-cta {
-    background: linear-gradient(135deg, #00c9ff, #00b894, #00f5d4);
-  }
+    background: linear-gradient(135deg, #FFDF66, #FFC200, #4D13BD); /* Gold highlight with Purple */
+  } 
 }
 
 @layer components {
@@ -86,21 +94,34 @@
     @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
   }
   
-  .btn-primary {
-    @apply bg-gradient-primary hover:bg-gradient-accent text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25;
-  }
+
+  /* .btn-primary {
+  @apply bg-gradient-primary hover:bg-gradient-gold text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-[#ffc200]/25;
+} */
+
+
+/*  The button color changes to gold on hover*/
+
+/* .btn-primary {
+  @apply bg-gradient-primary hover:bg-gradient-gold text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-[#ffc200]/25;
+} */ 
+
+.btn-primary {
+  @apply bg-gradient-primary hover:bg-gradient-gold-hover text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg;
+}
   
   .btn-secondary {
     @apply bg-gradient-secondary hover:bg-gradient-card text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg;
   }
   
   .btn-accent {
-    @apply bg-gradient-accent hover:bg-gradient-neon text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25;
+    @apply bg-gradient-accent hover:bg-gradient-neon text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-[#4169E1]/25;
   }
   
   .btn-cta {
-    @apply bg-gradient-cta hover:bg-gradient-neon text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25;
+    @apply bg-gradient-cta hover:bg-gradient-neon text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-[#4169E1]/25;
   }
+  
 }
 
 @layer utilities {

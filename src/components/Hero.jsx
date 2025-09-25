@@ -6,8 +6,8 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 500], [0, -150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
-  const scrollToPrograms = () => {
-    const element = document.querySelector('#programs')
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
@@ -102,7 +102,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed"
           >
-            Atium Sports is more than a sports brand — we are a movement. We provide athletes 
+            ATIUM Sports is more than a sports brand — we are a movement. We provide athletes 
             with the tools, programs, and community they need to push their boundaries and achieve greatness.
           </motion.p>
 
@@ -116,10 +116,10 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={scrollToPrograms}
+              onClick={scrollToContact}
               className="btn-primary flex items-center space-x-2 text-lg px-8 py-4"
             >
-              <span>Explore Programs</span>
+              <span>Book a Trial</span>
               <ArrowRight className="w-5 h-5" />
             </motion.button>
 

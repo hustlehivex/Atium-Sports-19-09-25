@@ -29,6 +29,9 @@ const About = () => {
   ]
 
   return (
+
+           /*Background animation*/ 
+    
     <section id="about" className="section-padding bg-gradient-base relative overflow-hidden">
       {/* Background Elements */}
       <motion.div
@@ -140,7 +143,7 @@ const About = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-8 left-8 bg-white/90 dark:bg-secondary-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
               >
-                <div className="text-2xl font-bold text-primary-600">500+</div>
+                <div className="text-2xl font-bold text-accent-600">500+</div>
                 <div className="text-sm text-secondary-600 dark:text-secondary-300">Athletes</div>
               </motion.div>
 
@@ -149,7 +152,7 @@ const About = () => {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-16 right-8 bg-white/90 dark:bg-secondary-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
               >
-                <div className="text-2xl font-bold text-accent-600">50+</div>
+                <div className="text-2xl font-bold text-primary-600">50+</div>
                 <div className="text-sm text-secondary-600 dark:text-secondary-300">Programs</div>
               </motion.div>
 
@@ -158,7 +161,7 @@ const About = () => {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute bottom-16 left-8 bg-white/90 dark:bg-secondary-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
               >
-                <div className="text-2xl font-bold text-primary-600">15+</div>
+                <div className="text-2xl font-bold text-accent-600">15+</div>
                 <div className="text-sm text-secondary-600 dark:text-secondary-300">Sports</div>
               </motion.div>
 
@@ -167,7 +170,7 @@ const About = () => {
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute bottom-8 right-8 bg-white/90 dark:bg-secondary-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
               >
-                <div className="text-2xl font-bold text-accent-600">100%</div>
+                <div className="text-2xl font-bold text-primary-600">100%</div>
                 <div className="text-sm text-secondary-600 dark:text-secondary-300">Dedication</div>
               </motion.div>
 
@@ -179,7 +182,7 @@ const About = () => {
                   className="w-32 h-32 border-4 border-white/30 rounded-full flex items-center justify-center"
                 >
                   <div className="w-24 h-24 bg-gradient-accent rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-2xl">A</span>
+                    <span className="text-white font-bold text-2xl"><img src="../assets/logos/atium-logo.svg" alt="Atium Sports" /></span>
                   </div>
                 </motion.div>
               </div>

@@ -6,7 +6,7 @@ const HomeObjectives = () => {
     <section className="home-objectives">
     <div className="home-content15">
       <span className="home-text29">Objectives</span>
-      <div className="home-objectives-list">
+        <div className="home-objectives-list">
         <div className="objective">
           <h3 className="home-text30">Growth</h3>
           <p className="home-text31">
