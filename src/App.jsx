@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -14,6 +15,7 @@ import CompanyHighlights from './components/Pages/CompanyHighlights'
 import PartnersSection from './components/PartnersSection'
 import PricingPlans from './components/PricingPlans'
 import Highlights from './pages/Highlights'
+import FeaturesPage from './pages/FeaturesPage'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -46,6 +48,7 @@ function App() {
   }
 
   return (
+    <>
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark' : ''}`}>
       <div className="bg-white dark:bg-secondary-900 text-secondary-900 dark:text-white">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} navigateToPage={navigateToPage} />
@@ -60,6 +63,7 @@ function App() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
+                
                 <Hero />
                 <About />
                 <HomeObjectives />
@@ -70,7 +74,8 @@ function App() {
                 <Testimonials />
                 <PricingPlans />
                 <Contact />
-                <CompanyHighlights />
+                <FeaturesPage />
+                {/* <CompanyHighlights /> */}
               </motion.div>
             )}
             {currentPage === 'highlights' && (
@@ -90,6 +95,13 @@ function App() {
         <Footer />
       </div>
     </div>
+    <Router>
+      <Routes>
+        {/* <Route path="/" element={<HomePage />} /> */}
+        
+      </Routes>
+    </Router>
+    </>
   )
 }
 

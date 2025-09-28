@@ -22,13 +22,16 @@ const Navbar = ({ darkMode, toggleDarkMode, navigateToPage }) => {
     { name: 'Events', href: '#events', page: 'home' },
     { name: 'Gallery', href: '#gallery', page: 'home' },
     { name: 'Features', href: '#highlights', page: 'highlights' },
+    { name: 'Features Page', href: '/featurespage', page: 'featurespage' },
     { name: 'Contact', href: '#contact', page: 'home' },
   ]
 
   const handleNavigation = (item) => {
     if (item.page === 'highlights') {
       navigateToPage('highlights')
-    } else {
+    } 
+    
+    else {
       navigateToPage('home')
       // Scroll to section after a brief delay to ensure page is loaded
       setTimeout(() => {
